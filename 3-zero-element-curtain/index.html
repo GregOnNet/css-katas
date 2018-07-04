@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Zero Element Curtain</title>
+  <style type="text/css">
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+    }
+
+    body {
+      position: relative;
+      background-color: rgb(58, 89, 151);
+      overflow: hidden;
+    }
+
+    body::before, body::after {
+      z-index: 1;
+      content: '';
+      position: relative;
+      display: block;
+      float: left;
+      background: rgb(32, 49, 84);
+      height: 100%;
+      width: 50%;
+      transform: translate3d(0, 0, 0);
+      transition: transform .5s linear;
+    }
+
+    body:hover::before {
+      transform: translate3d(-100%, 0, 0);
+    }
+    body:hover::after {
+      transform: translate3d(100%, 0, 0);
+    }
+
+    .greeting {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+  <h2 class="greeting">
+    Hello
+  </h2>
+<body>
+</body>
+
+</html>
