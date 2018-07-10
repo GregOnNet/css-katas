@@ -1,0 +1,39 @@
+.quarters {
+  display: flex;
+
+  .quarter {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(29, 150, 97);
+  }
+
+  .quarter:hover {
+    .ball--top {
+      transform: translateY(-260%);
+    }
+    .ball--bottom {
+      transform: translateY(260%);
+    }
+    .ball--left {
+      transform: translateX(-260%);
+    }
+    .ball--right {
+      transform: translateX(260%);
+    }
+  }
+
+  .ball {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: rgb(208, 59, 59);
+
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+  }
+}

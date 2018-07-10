@@ -1,0 +1,55 @@
+.quarters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.quarters .quarter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 16px;
+  width: 150px;
+  height: 150px;
+  background-color: #1d9661;
+}
+
+.quarters .quarter:hover .ball--top {
+  -webkit-transform: translateY(-260%);
+          transform: translateY(-260%);
+}
+
+.quarters .quarter:hover .ball--bottom {
+  -webkit-transform: translateY(260%);
+          transform: translateY(260%);
+}
+
+.quarters .quarter:hover .ball--left {
+  -webkit-transform: translateX(-260%);
+          transform: translateX(-260%);
+}
+
+.quarters .quarter:hover .ball--right {
+  -webkit-transform: translateX(260%);
+          transform: translateX(260%);
+}
+
+.quarters .ball {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #d03b3b;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  will-change: transform;
+}
+/*# sourceMappingURL=styles.css.map */
