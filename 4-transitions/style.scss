@@ -1,0 +1,31 @@
+html,
+body {
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif 
+}
+
+.gallery {
+  position: relative;
+
+  .photo {
+    width: 350px;
+    position: relative;
+
+    &:hover {
+      .header {
+        transform: translate3d(-100%, 0, 0);
+      }
+    }
+
+    .header {
+      position: absolute;
+      text-align: center;
+      height: 30px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(19, 17, 112, 0.5);
+      transition: transform .25s ease
+    }
+  }
+}
